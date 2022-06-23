@@ -2,17 +2,20 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "products",     
+    "products",
     "wishlist",
     "packages/common"
-  ],  
+  ],
   "scripts": {
-    "dev": "lerna bootstrap",
+    "dev": "lerna run --parallel start",
     "build": "lerna run build",
-    "start": "lerna run --parallel start",
+    "start": "node server.js",
     "heroku-postbuild": "lerna run build"
   },
   "devDependencies": {
     "lerna": "^5.1.4"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
   }
 }

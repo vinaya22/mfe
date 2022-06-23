@@ -8,6 +8,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         publicPath: "auto",
+        clean: true,
     },
     devServer: {
         static: path.join(__dirname, 'dist'),
