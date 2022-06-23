@@ -5,8 +5,7 @@ const ExternalTemplatesRemotePlugin = require("external-remotes-plugin");
 const deps = require('./package.json').dependencies;
 
 module.exports = {
-    entry: './src/index.js',
-    mode: 'development',
+    entry: './src/index.js',    
     output: {
         publicPath: "auto",
     },

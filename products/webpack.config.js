@@ -6,7 +6,6 @@ const deps = require('./package.json').dependencies;
 
 module.exports = {
     entry: './src/index.js',
-    mode: 'development',
     output: {
         publicPath: "auto",
     },
