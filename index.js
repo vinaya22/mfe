@@ -6,8 +6,9 @@ product.use(express.static(path.join(__dirname, 'products/dist')));
 product.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'products/dist'));
   });
-product.listen(3001, () => {
-    console.log('products app started at port 3001')
+const port = process.env.PORT || 3001;
+product.listen(port, () => {
+    console.log('products app started at port ', port)
 });
 
 
