@@ -6,9 +6,9 @@ product.use(express.static(path.join(__dirname, 'products/dist')));
 product.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'products/dist'));
   });
-const port = process.env.PORT || 3001;
-product.listen(port, () => {
-    console.log('products app started at port ', port)
+const port1 = process.env.PORT1 || 3001;
+product.listen(port1, () => {
+    console.log('products app started at port ', port1)
 });
 
 
@@ -17,6 +17,7 @@ wishList.use(express.static(path.join(__dirname, 'wishlist/dist')));
 wishList.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'wishlist/dist'));
   });
-wishList.listen(3002, () => {
-    console.log('wishlist app started at port 3002')
+const port2 = process.env.PORT2 || 3001;
+wishList.listen(port2, () => {
+    console.log('wishlist app started at port ', port2)
 });
