@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "lerna bootstrap",
     "build": "lerna run build",
-    "start": "lerna run --parallel start"
+    "start": "lerna run --parallel start",
+    "heroku-postbuild": "lerna run build"
   },
   "devDependencies": {
     "lerna": "^5.1.4"
