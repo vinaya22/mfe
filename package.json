@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "lerna run --parallel start",
     "build": "lerna run build",
-    "start": "node server.js",
+    "start": "node index.js",
     "heroku-postbuild": "lerna run build"
   },
   "devDependencies": {
