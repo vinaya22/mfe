@@ -37,7 +37,12 @@ module.exports = {
             exposes: {
                 './ProductList': './src/productList'
             },
-            shared: {react: {singleton: true}, "react-dom": {singleton: true, requiredVersion: deps['react-dom']}},            
+            shared: {
+                ...deps,
+                react: {singleton: true}, 
+                "react-dom": {singleton: true, requiredVersion: deps['react-dom']},
+                common: {singleton: true}
+            },            
         }),
         new HtmlWebpackPlugin({
             template: './public/index.html'

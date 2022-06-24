@@ -1,9 +1,12 @@
 import React from "react";
 import { SimpleGrid } from '@mantine/core';
 import {ProductCard} from 'common/src/index';
+import useStore from 'store/src/index';
+
 const productsData = require('./data/products.json').products;
 
-const ProductList = () => {
+const ProductList = (props) => {    
+
     return (
         <SimpleGrid  breakpoints={[
             { minWidth: 'sm', cols: 2 },
@@ -18,6 +21,7 @@ const ProductList = () => {
                             path={product.thumbnail}
                             brand={product.brand}
                             description={product.description}
+                            add={props.add}
                         />                                                    
                     );
                 })

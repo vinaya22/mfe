@@ -6,7 +6,14 @@ export const ProductsShell = props => {
     return (
         <BrowserRouter>
             <AppShell
-                header={<Header height={60} p="xs">{props.title}</Header>}
+                header={
+                    <Header height={60} p="xs">
+                        <div style={{display: "flex", justifyContent: "space-between", fontSize: "18px", color: 'black', fontWeight: "bold"}}>
+                            <span>{props.title}</span>
+                            <span>{`Items: ${props.count}`}</span>
+                        </div>
+                    </Header>
+                }
                 navbar={<Nav navLinks={props.navLinks}/>}                
             >               
                 <Outlet/>
