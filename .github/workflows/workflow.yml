@@ -1,3 +1,4 @@
+# File: .github/workflows/workflow.yml
 name: JavaScript CI
 
 on: [push]
@@ -12,7 +13,7 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@master
     - name: Use Node.js ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v1
       with:
@@ -25,7 +26,7 @@ jobs:
       working-directory: my-app-folder
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
-  with:
-    app-name: ${{ env.AZURE_WEBAPP_NAME }}
-    publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-    package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
