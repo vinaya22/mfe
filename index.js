@@ -17,7 +17,7 @@ wishList.use(express.static(path.join(__dirname, 'wishlist/dist')));
 wishList.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'wishlist/dist'));
   });
-const port2 = process.env.PORT2 || 3001;
+const port2 = process.env.PORT2 || 3002;
 wishList.listen(port2, () => {
     console.log('wishlist app started at port ', port2)
 });
