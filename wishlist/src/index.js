@@ -1,3 +1,3 @@
-window.productsUrl = "http://localhost:3001";
+window.productsUrl = "https://mfe-products.azurewebsites.net";
 
 import('./bootstrap');

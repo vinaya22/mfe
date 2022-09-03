@@ -1,3 +1,3 @@
-window.wishListUrl = "http://localhost:3002";
+window.wishListUrl = "https://mfe-wishlist.azurewebsites.net";
 
 import('./bootstarp');
