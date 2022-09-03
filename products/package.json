@@ -25,6 +25,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "common": "*",
-    "store": "*"
+    "store": "*",
+    "express": "^4.18.1"
+  },
+  "engines" : { 
+    "node" : "16.x" 
   }
 }
