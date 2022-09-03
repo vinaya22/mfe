@@ -1,12 +1,12 @@
-# File: .github/workflows/workflow.yml
-name: JavaScript CI
+# File: .github/workflows/products.yml
+name: Products CI
 
 on: [push]
 
 env:
   PRODUCTION_DOMAIN: ${{ secrets.destinationAppUrl }}
   AZURE_WEBAPP_NAME: mfe-products   # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: './products'      # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '16.x'                # set this to the node version to use
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
         npm install
         npm run build --if-present
         npm run test --if-present
-      working-directory: '.'
+      working-directory: './products'
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
       with: 
